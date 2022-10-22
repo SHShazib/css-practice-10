@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* =========Tooltip=========== */
 .tooltip {
@@ -53,5 +54,125 @@ body{
 }
 .images img:hover {
     border: 10px ridge #f53b57;
-    filter: grayscale(100%);
+}
+
+/* ======Container 1========= */
+
+.container1 {
+    position: relative;
+    width: 300px;
+    border: 5px solid #0be881;
+    margin: 20px;
+}
+.container1 .image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.container1 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+.container1:hover .overlay{
+    opacity: 1;
+}
+.container1 .text {
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* container 02 */
+.container2 {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+}
+.container2 .image {
+    width: 400px;
+    height: 300px;
+    display: block;
+}
+.container2 .overlay {
+    position: absolute;
+    transition: all 0.5s ease;
+    opacity: 0;
+    background-color: #008CBA;
+}
+.text {
+    color: #fff;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+/* =======Left======= */
+.OverlayLeft {
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+}
+.container2:hover .OverlayLeft{
+    opacity: 1;
+    width: 100%;
+}
+/* =======Right======= */
+.OverlayRight {
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+}
+.container2:hover .OverlayRight{
+    opacity: 1;
+    width: 100%;
+}
+/* =======Top======= */
+.OverlayTop {
+    height: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.container2:hover .OverlayTop{
+    opacity: 1;
+    height: 100%;
+}
+/* =======Bottom======= */
+.OverlayBottom {
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.container2:hover .OverlayBottom{
+    opacity: 1;
+    height: 100%;
+}
+/* =======Corner======= */
+.OverlayCorner {
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.container2:hover .OverlayCorner{
+    opacity: 1;
+    height: 100%;
 }
